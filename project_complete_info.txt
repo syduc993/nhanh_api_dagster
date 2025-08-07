@@ -1,0 +1,1506 @@
+================================================================================
+THÔNG TIN DỰ ÁN HOÀN CHỈNH
+================================================================================
+Thời gian tạo: 2025-08-07 11:57:37
+Thư mục gốc: d:\Atino\nhanh_api_dagster
+================================================================================
+
+📁 CẤU TRÚC THU MỤC
+--------------------------------------------------
+├── 📁 data/
+├── 📁 docs/
+│   └── 📄 README.md
+├── 📁 project/
+│   ├── 📁 jobs/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 nhanh_data_pipeline.py
+│   ├── 📁 ops/
+│   │   ├── 📄 __init__.py
+│   │   ├── 📄 bills_ops.py
+│   │   ├── 📄 imexs_ops.py
+│   │   └── 📄 utils_ops.py
+│   ├── 📁 resources/
+│   │   ├── 📄 __init__.py
+│   │   ├── 📄 database_resource.py
+│   │   └── 📄 nhanh_api_resource.py
+│   ├── 📁 schedules/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 daily_schedule.py
+│   ├── 📄 __init__.py
+│   ├── 📄 config.py
+│   └── 📄 repository.py
+├── 📁 tests/
+│   └── 📄 __init__.py
+├── 📄 .gitignore
+├── 📄 Dockerfile
+├── 📄 Get detail code.ipynb
+├── 📄 project_complete_info.txt
+├── 📄 requirements.txt
+└── 📄 workspace.yaml
+
+
+📄 DANH SÁCH TẤT CẢ FILE
+--------------------------------------------------
+.gitignore (403 bytes)
+.tmp_dagster_home_62_lcao7\history\runs\15083412-53eb-4516-8609-a7cc04e6fe72.db (258048 bytes)
+.tmp_dagster_home_62_lcao7\history\runs\index.db (126976 bytes)
+.tmp_dagster_home_62_lcao7\history\runs.db (135168 bytes)
+.tmp_dagster_home_62_lcao7\schedules\schedules.db (77824 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_bills_op\result (5795 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_imexs_op\result (1098435 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\setup_pipeline_op\result (239 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\validate_date_op\result (25 bytes)
+Dockerfile (574 bytes)
+docs\README.md (704 bytes)
+Get detail code.ipynb (8697 bytes)
+project\__init__.py (0 bytes)
+project\config.py (891 bytes)
+project\jobs\__init__.py (91 bytes)
+project\jobs\nhanh_data_pipeline.py (2125 bytes)
+project\ops\__init__.py (173 bytes)
+project\ops\bills_ops.py (2496 bytes)
+project\ops\imexs_ops.py (2473 bytes)
+project\ops\utils_ops.py (1963 bytes)
+project\repository.py (534 bytes)
+project\resources\__init__.py (153 bytes)
+project\resources\database_resource.py (1733 bytes)
+project\resources\nhanh_api_resource.py (4713 bytes)
+project\schedules\__init__.py (69 bytes)
+project\schedules\daily_schedule.py (691 bytes)
+project_complete_info.txt (0 bytes)
+requirements.txt (126 bytes)
+tests\__init__.py (0 bytes)
+workspace.yaml (114 bytes)
+
+Tổng cộng: 48 file
+
+💻 NỘI DUNG TẤT CẢ FILE CODE
+================================================================================
+
+============================================================
+FILE: docs\README.md
+============================================================
+# Nhanh.vn Data Pipeline
+
+## Architecture
+
+This project uses **Jobs/Ops approach** with the following components:
+
+### Components
+- **Jobs**: Define workflows (`nhanh_daily_job`, `nhanh_backfill_job`)
+- **Ops**: Individual operations (extract, load, validate)
+- **Resources**: External systems (API, Database)
+- **Schedules**: Automated triggers
+
+### Data Flow
+1. **validate_date_op**: Validate partition date
+2. **setup_pipeline_op**: Initialize DLT pipeline
+3. **extract_bills_op**: Extract bills from API
+4. **extract_imexs_op**: Extract imexs from API  
+5. **load_bills_op**: Load bills to DuckDB
+6. **load_imexs_op**: Load imexs to DuckDB
+
+## Setup
+
+1. Copy environment file:
+
+============================================================
+
+============================================================
+FILE: project\__init__.py
+============================================================
+
+============================================================
+
+============================================================
+FILE: project\config.py
+============================================================
+# project/config.py (file mới)
+import os
+
+CONFIG = {
+    "api": {
+        "app_id": os.getenv("NHANH_APP_ID", "74951"),
+        "business_id": os.getenv("NHANH_BUSINESS_ID", "8901"),
+        "access_token": os.getenv("NHANH_ACCESS_TOKEN", 
+            "twf9P1xFZCUUgwt8zR0XgNeB6V5jsbq2KHb14bxovqK1ppCxyADwOK8FzQlCEeEGABRZINXoUCSzM50kjhwcrUSBWTY5nSvyhfnH2X2cI0pC7pNczSVxc1ratdDmxF85q7hUTUNCrUnpPTG5ZwLNO7bkMlEEJTCdPhgYaC"),
+        "base_url": "https://pos.open.nhanh.vn/api",
+        "version": "2.0",
+        "timeout": 30,
+        "max_retries": 3
+    },
+    "database": {
+        "path": os.getenv("DATABASE_PATH", "data"),
+        "name_template": "nhanh_data_{date}.duckdb"
+    },
+    "data": {
+        "default_depot_id": 155286,
+        "default_mode_bills": 6,
+        "default_mode_imexs": 2,
+        "default_icpp": 20,
+        "max_pages": 100
+    }
+}
+
+============================================================
+
+============================================================
+FILE: project\jobs\__init__.py
+============================================================
+from .nhanh_data_pipeline import *
+
+__all__ = ['nhanh_daily_job', 'nhanh_backfill_job']
+
+============================================================
+
+============================================================
+FILE: project\jobs\nhanh_data_pipeline.py
+============================================================
+from dagster import job, DailyPartitionsDefinition
+from ..config import CONFIG  # ← Thêm dòng này
+from ..ops.bills_ops import extract_bills_op, load_bills_op
+from ..ops.imexs_ops import extract_imexs_op, load_imexs_op
+from ..ops.utils_ops import validate_date_op, setup_pipeline_op
+from ..resources.nhanh_api_resource import nhanh_api_resource
+from ..resources.database_resource import database_resource
+
+# Partition definition
+daily_partitions = DailyPartitionsDefinition(
+    start_date="2024-01-01",
+    end_offset=0
+)
+
+@job(
+    partitions_def=daily_partitions,
+    resource_defs={
+        # ← Thay đổi ở đây - configure resources với CONFIG
+        "nhanh_api": nhanh_api_resource.configured(CONFIG["api"]),
+        "database": database_resource.configured(CONFIG["database"])
+    },
+    tags={
+        "pipeline": "nhanh_data",
+        "frequency": "daily"
+    }
+)
+def nhanh_daily_job():
+    """Daily job to extract and load Nhanh.vn data."""
+    
+    # Get partition date and validate
+    validated_date = validate_date_op()
+    
+    # Setup pipeline
+    pipeline = setup_pipeline_op(validated_date)
+    
+    # Extract data
+    bills_data = extract_bills_op(validated_date)
+    imexs_data = extract_imexs_op(validated_date)
+    
+    # Load data
+    bills_result = load_bills_op(bills_data, pipeline)
+    imexs_result = load_imexs_op(imexs_data, pipeline)
+
+@job(
+    resource_defs={
+        "nhanh_api": nhanh_api_resource,
+        "database": database_resource
+    },
+    tags={
+        "pipeline": "nhanh_data",
+        "frequency": "adhoc"
+    }
+)
+def nhanh_backfill_job():
+    """Ad-hoc job for backfilling historical data."""
+    
+    # Get and validate date
+    validated_date = validate_date_op()
+    
+    # Setup pipeline
+    pipeline = setup_pipeline_op(validated_date)
+    
+    # Extract data
+    bills_data = extract_bills_op(validated_date)
+    imexs_data = extract_imexs_op(validated_date)
+    
+    # Load data
+    bills_result = load_bills_op(bills_data, pipeline)
+    imexs_result = load_imexs_op(imexs_data, pipeline)
+
+============================================================
+
+============================================================
+FILE: project\ops\__init__.py
+============================================================
+from .bills_ops import *
+from .imexs_ops import *
+from .utils_ops import *
+
+__all__ = ['extract_bills_op', 'extract_imexs_op', 'validate_date_op', 'setup_pipeline_op']
+
+============================================================
+
+============================================================
+FILE: project\ops\bills_ops.py
+============================================================
+from dagster import op, In, Out, get_dagster_logger, Field
+import dlt
+
+@op(
+    required_resource_keys={"nhanh_api"},
+    ins={
+        "date": In(str, description="Date to extract bills for")
+    },
+    out=Out(list, description="Bills data extracted from API"),
+    config_schema={
+        "depot_id": Field(int, default_value=155286),
+        "mode": Field(int, default_value=6)
+    },
+    tags={"kind": "extract", "source": "bills"}
+)
+def extract_bills_op(context, date: str) -> list:
+    """Extract bills data from Nhanh.vn API."""
+    logger = get_dagster_logger()
+    api = context.resources.nhanh_api
+    
+    depot_id = context.op_config["depot_id"]
+    mode = context.op_config["mode"]
+    
+    data_dict = {
+        "depotId": depot_id,
+        "mode": mode,
+        "fromDate": date,
+        "toDate": date
+    }
+    
+    logger.info(f"Extracting bills for date {date} with params: {data_dict}")
+    
+    bills_data = api.extract_data(
+        endpoint="bill/search",
+        data_dict=data_dict,
+        data_key="bill"
+    )
+    
+    logger.info(f"Successfully extracted {len(bills_data)} bills records")
+    return bills_data
+
+@dlt.resource
+def bills_dlt_resource(bills_data: list):
+    """DLT resource for bills data."""
+    if bills_data:
+        yield bills_data
+    else:
+        # Yield empty list to avoid DLT errors
+        yield []
+
+@op(
+    ins={
+        "bills_data": In(list, description="Bills data to load"),
+        "pipeline": In(object, description="DLT pipeline object")
+    },
+    out=Out(str, description="Load result message"),
+    tags={"kind": "load", "destination": "duckdb"}
+)
+def load_bills_op(context, bills_data: list, pipeline: object) -> str:
+    """Load bills data using DLT pipeline."""
+    logger = get_dagster_logger()
+    
+    # Create DLT resource
+    bills_resource = bills_dlt_resource(bills_data)
+    
+    try:
+        # Run the pipeline
+        load_info = pipeline.run(
+            [bills_resource],
+            dataset_name=f"bills_{context.partition_key.replace('-', '')}",
+            write_disposition="replace"
+        )
+        
+        result_msg = f"Bills loaded successfully: {len(bills_data)} records"
+        logger.info(result_msg)
+        logger.debug(f"Load info: {load_info}")
+        
+        return result_msg
+    except Exception as e:
+        error_msg = f"Failed to load bills data: {str(e)}"
+        logger.error(error_msg)
+        raise
+
+============================================================
+
+============================================================
+FILE: project\ops\imexs_ops.py
+============================================================
+from dagster import op, In, Out, get_dagster_logger, Field
+import dlt
+
+@op(
+    required_resource_keys={"nhanh_api"},
+    ins={
+        "date": In(str, description="Date to extract imexs for")
+    },
+    out=Out(list, description="Imexs data extracted from API"),
+    config_schema={
+        "icpp": Field(int, default_value=20),
+        "mode": Field(int, default_value=2)
+    },
+    tags={"kind": "extract", "source": "imexs"}
+)
+def extract_imexs_op(context, date: str) -> list:
+    """Extract imexs data from Nhanh.vn API."""
+    logger = get_dagster_logger()
+    api = context.resources.nhanh_api
+    
+    icpp = context.op_config["icpp"]
+    mode = context.op_config["mode"]
+    
+    data_dict = {
+        "icpp": icpp,
+        "mode": mode,
+        "fromDate": date,
+        "toDate": date
+    }
+    
+    logger.info(f"Extracting imexs for date {date} with params: {data_dict}")
+    
+    imexs_data = api.extract_data(
+        endpoint="bill/imexs",
+        data_dict=data_dict,
+        data_key="imexs"
+    )
+    
+    logger.info(f"Successfully extracted {len(imexs_data)} imexs records")
+    return imexs_data
+
+@dlt.resource
+def imexs_dlt_resource(imexs_data: list):
+    """DLT resource for imexs data."""
+    if imexs_data:
+        yield imexs_data
+    else:
+        # Yield empty list to avoid DLT errors
+        yield []
+
+@op(
+    ins={
+        "imexs_data": In(list, description="Imexs data to load"),
+        "pipeline": In(object, description="DLT pipeline object")
+    },
+    out=Out(str, description="Load result message"),
+    tags={"kind": "load", "destination": "duckdb"}
+)
+def load_imexs_op(context, imexs_data: list, pipeline: object) -> str:
+    """Load imexs data using DLT pipeline."""
+    logger = get_dagster_logger()
+    
+    # Create DLT resource
+    imexs_resource = imexs_dlt_resource(imexs_data)
+    
+    try:
+        # Run the pipeline
+        load_info = pipeline.run(
+            [imexs_resource],
+            dataset_name=f"imexs_{context.partition_key.replace('-', '')}",
+            write_disposition="replace"
+        )
+        
+        result_msg = f"Imexs loaded successfully: {len(imexs_data)} records"
+        logger.info(result_msg)
+        logger.debug(f"Load info: {load_info}")
+        
+        return result_msg
+    except Exception as e:
+        error_msg = f"Failed to load imexs data: {str(e)}"
+        logger.error(error_msg)
+        raise
+
+============================================================
+
+============================================================
+FILE: project\ops\utils_ops.py
+============================================================
+from datetime import datetime, timedelta
+from dagster import op, In, Out, get_dagster_logger
+
+@op(
+    out=Out(str, description="Validated date string"),
+    tags={"kind": "validation"}
+)
+def validate_date_op(context) -> str:
+    """Validate and return date string in YYYY-MM-DD format."""
+    logger = get_dagster_logger()
+
+    # Lấy date từ partition key
+    date_str = context.partition_key
+
+    try:
+        # Validate date format
+        parsed_date = datetime.strptime(date_str, "%Y-%m-%d")
+        validated_date = parsed_date.strftime("%Y-%m-%d")
+        logger.info(f"Date validated: {validated_date}")
+        return validated_date
+    except ValueError as e:
+        logger.error(f"Invalid date format {date_str}: {str(e)}")
+        raise
+
+@op(
+    out=Out(str, description="Today's date"),
+    tags={"kind": "utility"}
+)
+def get_today_op(context) -> str:
+    """Get today's date."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    get_dagster_logger().info(f"Today's date: {today}")
+    return today
+
+@op(
+    out=Out(str, description="Yesterday's date"),
+    tags={"kind": "utility"}
+)
+def get_yesterday_op(context) -> str:
+    """Get yesterday's date."""
+    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    get_dagster_logger().info(f"Yesterday's date: {yesterday}")
+    return yesterday
+
+@op(
+    required_resource_keys={"database"},
+    ins={"date": In(str, description="Date for pipeline setup")},
+    out=Out(object, description="DLT Pipeline object"),
+    tags={"kind": "setup"}
+)
+def setup_pipeline_op(context, date: str) -> object:
+    """Setup DLT pipeline for given date."""
+    logger = get_dagster_logger()
+    pipeline_name = f"nhanh_data_pipeline_{date.replace('-', '')}"
+    
+    pipeline = context.resources.database.create_pipeline(pipeline_name, date)
+    logger.info(f"Pipeline setup completed: {pipeline_name}")
+    
+    return pipeline
+
+============================================================
+
+============================================================
+FILE: project\repository.py
+============================================================
+# project/repository.py
+from dagster import Definitions
+from .jobs.nhanh_data_pipeline import nhanh_daily_job, nhanh_backfill_job
+from .schedules.daily_schedule import nhanh_daily_schedule
+from .resources.nhanh_api_resource import nhanh_api_resource
+from .resources.database_resource import database_resource
+
+defs = Definitions(
+    jobs=[nhanh_daily_job, nhanh_backfill_job],
+    schedules=[nhanh_daily_schedule],
+    resources={
+        "nhanh_api": nhanh_api_resource,
+        "database": database_resource
+    }
+)
+
+============================================================
+
+============================================================
+FILE: project\resources\__init__.py
+============================================================
+from .nhanh_api_resource import NhanhAPIResource
+from .database_resource import DatabaseResource
+
+__all__ = ['NhanhAPIResource', 'DatabaseResource']
+
+============================================================
+
+============================================================
+FILE: project\resources\database_resource.py
+============================================================
+import dlt
+from pathlib import Path
+from dagster import resource, get_dagster_logger, Field, StringSource
+
+@resource(
+    config_schema={
+        "path": Field(StringSource),
+        "name_template": Field(StringSource),
+        "driver": Field(StringSource, default_value="duckdb")
+    }
+)
+def database_resource(context) -> "DatabaseResource":
+    """Resource for database operations."""
+    return DatabaseResource(
+        path=context.resource_config["path"],
+        name_template=context.resource_config["name_template"], 
+        driver=context.resource_config["driver"],
+        logger=get_dagster_logger()
+    )
+
+class DatabaseResource:
+    def __init__(self, path: str, name_template: str, driver: str, logger):
+        self.path = Path(path)
+        self.name_template = name_template
+        self.driver = driver
+        self.logger = logger
+        
+        # Ensure data directory exists
+        self.path.mkdir(parents=True, exist_ok=True)
+
+    def get_db_path(self, date: str) -> Path:
+        """Get database path for given date."""
+        db_name = self.name_template.format(date=date.replace('-', ''))
+        return self.path / db_name
+
+    def create_pipeline(self, pipeline_name: str, date: str):
+        """Create DLT pipeline for given date."""
+        db_path = self.get_db_path(date)
+        self.logger.info(f"Creating pipeline with DB path: {db_path}")
+        
+        # Tạo pipeline với working directory
+        pipeline = dlt.pipeline(
+            pipeline_name=pipeline_name,
+            destination=dlt.destinations.duckdb(str(db_path)),
+            dataset_name=f"nhanh_data_{date.replace('-', '')}"
+        )
+        
+        return pipeline
+
+
+============================================================
+
+============================================================
+FILE: project\resources\nhanh_api_resource.py
+============================================================
+import requests
+import json
+from typing import Dict, Any, Generator
+from dagster import resource, get_dagster_logger, Field, StringSource
+
+@resource(
+    config_schema={
+        "app_id": Field(StringSource),
+        "business_id": Field(StringSource), 
+        "access_token": Field(StringSource),
+        "base_url": Field(StringSource),
+        "version": Field(StringSource, default_value="2.0"),
+        "timeout": Field(int, default_value=30),
+        "max_retries": Field(int, default_value=3)
+    }
+)
+def nhanh_api_resource(context) -> "NhanhAPIResource":
+    """Resource for interacting with Nhanh.vn API."""
+    return NhanhAPIResource(
+        app_id=context.resource_config["app_id"],
+        business_id=context.resource_config["business_id"],
+        access_token=context.resource_config["access_token"],
+        base_url=context.resource_config["base_url"],
+        version=context.resource_config["version"],
+        timeout=context.resource_config["timeout"],
+        max_retries=context.resource_config["max_retries"],
+        logger=get_dagster_logger()
+    )
+
+class NhanhAPIResource:
+    def __init__(self, app_id: str, business_id: str, access_token: str, 
+                 base_url: str, version: str, timeout: int, max_retries: int, logger):
+        self.app_id = app_id
+        self.business_id = business_id
+        self.access_token = access_token
+        self.base_url = base_url
+        self.version = version
+        self.timeout = timeout
+        self.max_retries = max_retries
+        self.logger = logger
+
+    def build_payload(self, data_dict: Dict[str, Any]) -> Dict[str, Any]:
+        """Build payload for Nhanh.vn API."""
+        return {
+            "version": self.version,
+            "appId": self.app_id,
+            "businessId": self.business_id,
+            "accessToken": self.access_token,
+            "data": json.dumps(data_dict)
+        }
+
+    def call_api_paginated(self, endpoint: str, data_dict: Dict[str, Any], 
+                          page_key: str = "page", max_pages: int = 100) -> Generator[Dict[str, Any], None, None]:
+        """Call API with pagination support."""
+        page = 1
+        url = f"{self.base_url}/{endpoint.lstrip('/')}"
+        
+        while page <= max_pages:
+            data_dict[page_key] = page
+            payload = self.build_payload(data_dict)
+            
+            try:
+                response = requests.post(url, data=payload, timeout=self.timeout)
+                response.raise_for_status()
+            except requests.RequestException as e:
+                self.logger.error(f"HTTP Request failed for page {page}: {str(e)}")
+                break
+            
+            try:
+                resp_json = response.json()
+            except json.JSONDecodeError:
+                self.logger.error(f"Invalid JSON response for page {page}")
+                break
+
+            api_code = resp_json.get("code")
+            page_data = resp_json.get("data", {})
+            
+            if api_code != 1:
+                self.logger.warning(f"API returned code {api_code} for page {page}")
+                if not page_data:
+                    break
+            
+            if page_data:
+                yield page_data
+            else:
+                break
+
+            current_page = page_data.get("page", page_data.get("currentPage", page))
+            total_pages = page_data.get("totalPages", page_data.get("totalPage", page))
+            
+            if current_page >= total_pages:
+                break
+                
+            page += 1
+
+    def extract_data(self, endpoint: str, data_dict: Dict[str, Any], 
+                    data_key: str, page_key: str = "page", max_pages: int = 100) -> list:
+        """Extract data from paginated API calls."""
+        all_data = []
+        
+        try:
+            for page_data in self.call_api_paginated(endpoint, data_dict, page_key, max_pages):
+                if data_key in page_data:
+                    data_on_page = page_data[data_key]
+                    if isinstance(data_on_page, dict):
+                        all_data.extend(list(data_on_page.values()))
+                    elif isinstance(data_on_page, list):
+                        all_data.extend(data_on_page)
+                    else:
+                        self.logger.warning(f"Unexpected data structure for {data_key}: {type(data_on_page)}")
+        except Exception as e:
+            self.logger.error(f"Error extracting data from {endpoint}: {str(e)}")
+            
+        self.logger.info(f"Extracted {len(all_data)} records from {endpoint}")
+        return all_data
+
+============================================================
+
+============================================================
+FILE: project\schedules\__init__.py
+============================================================
+from .daily_schedule import *
+
+__all__ = ['nhanh_daily_schedule']
+
+============================================================
+
+============================================================
+FILE: project\schedules\daily_schedule.py
+============================================================
+from dagster import schedule, RunRequest
+from datetime import datetime, timedelta
+from ..jobs.nhanh_data_pipeline import nhanh_daily_job
+
+@schedule(
+    job=nhanh_daily_job,
+    cron_schedule="0 2 * * *",  # Run at 2 AM daily
+    tags={
+        "schedule": "daily",
+        "pipeline": "nhanh_data"
+    }
+)
+def nhanh_daily_schedule(context):
+    """Daily schedule for Nhanh.vn data pipeline."""
+    # Run for yesterday's data
+    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    
+    return RunRequest(
+        partition_key=yesterday,
+        tags={
+            "scheduled_date": yesterday,
+            "trigger": "schedule"
+        }
+    )
+
+============================================================
+
+============================================================
+FILE: project_complete_info.txt
+============================================================
+================================================================================
+THÔNG TIN DỰ ÁN HOÀN CHỈNH
+================================================================================
+Thời gian tạo: 2025-08-07 11:57:37
+Thư mục gốc: d:\Atino\nhanh_api_dagster
+================================================================================
+
+📁 CẤU TRÚC THU MỤC
+--------------------------------------------------
+├── 📁 data/
+├── 📁 docs/
+│   └── 📄 README.md
+├── 📁 project/
+│   ├── 📁 jobs/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 nhanh_data_pipeline.py
+│   ├── 📁 ops/
+│   │   ├── 📄 __init__.py
+│   │   ├── 📄 bills_ops.py
+│   │   ├── 📄 imexs_ops.py
+│   │   └── 📄 utils_ops.py
+│   ├── 📁 resources/
+│   │   ├── 📄 __init__.py
+│   │   ├── 📄 database_resource.py
+│   │   └── 📄 nhanh_api_resource.py
+│   ├── 📁 schedules/
+│   │   ├── 📄 __init__.py
+│   │   └── 📄 daily_schedule.py
+│   ├── 📄 __init__.py
+│   ├── 📄 config.py
+│   └── 📄 repository.py
+├── 📁 tests/
+│   └── 📄 __init__.py
+├── 📄 .gitignore
+├── 📄 Dockerfile
+├── 📄 Get detail code.ipynb
+├── 📄 project_complete_info.txt
+├── 📄 requirements.txt
+└── 📄 workspace.yaml
+
+
+📄 DANH SÁCH TẤT CẢ FILE
+--------------------------------------------------
+.gitignore (403 bytes)
+.tmp_dagster_home_62_lcao7\history\runs\15083412-53eb-4516-8609-a7cc04e6fe72.db (258048 bytes)
+.tmp_dagster_home_62_lcao7\history\runs\index.db (126976 bytes)
+.tmp_dagster_home_62_lcao7\history\runs.db (135168 bytes)
+.tmp_dagster_home_62_lcao7\schedules\schedules.db (77824 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.complete (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.err (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.out (0 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_bills_op\result (5795 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_imexs_op\result (1098435 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\setup_pipeline_op\result (239 bytes)
+.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\validate_date_op\result (25 bytes)
+Dockerfile (574 bytes)
+docs\README.md (704 bytes)
+Get detail code.ipynb (8697 bytes)
+project\__init__.py (0 bytes)
+project\config.py (891 bytes)
+project\jobs\__init__.py (91 bytes)
+project\jobs\nhanh_data_pipeline.py (2125 bytes)
+project\ops\__init__.py (173 bytes)
+project\ops\bills_ops.py (2496 bytes)
+project\ops\imexs_ops.py (2473 bytes)
+project\ops\utils_ops.py (1963 bytes)
+project\repository.py (534 bytes)
+project\resources\__init__.py (153 bytes)
+project\resources\database_resource.py (1733 bytes)
+project\resources\nhanh_api_resource.py (4713 bytes)
+project\schedules\__init__.py (69 bytes)
+project\schedules\daily_schedule.py (691 bytes)
+project_complete_info.txt (0 bytes)
+requirements.txt (126 bytes)
+tests\__init__.py (0 bytes)
+workspace.yaml (114 bytes)
+
+Tổng cộng: 48 file
+
+💻 NỘI DUNG TẤT CẢ FILE CODE
+================================================================================
+
+============================================================
+FILE: docs\README.md
+============================================================
+# Nhanh.vn Data Pipeline
+
+## Architecture
+
+This project uses **Jobs/Ops approach** with the following components:
+
+### Components
+- **Jobs**: Define workflows (`nhanh_daily_job`, `nhanh_backfill_job`)
+- **Ops**: Individual operations (extract, load, validate)
+- **Resources**: External systems (API, Database)
+- **Schedules**: Automated triggers
+
+### Data Flow
+1. **validate_date_op**: Validate partition date
+2. **setup_pipeline_op**: Initialize DLT pipeline
+3. **extract_bills_op**: Extract bills from API
+4. **extract_imexs_op**: Extract imexs from API  
+5. **load_bills_op**: Load bills to DuckDB
+6. **load_imexs_op**: Load imexs to DuckDB
+
+## Setup
+
+1. Copy environment file:
+
+============================================================
+
+============================================================
+FILE: project\__init__.py
+============================================================
+
+============================================================
+
+============================================================
+FILE: project\config.py
+============================================================
+# project/config.py (file mới)
+import os
+
+CONFIG = {
+    "api": {
+        "app_id": os.getenv("NHANH_APP_ID", "74951"),
+        "business_id": os.getenv("NHANH_BUSINESS_ID", "8901"),
+        "access_token": os.getenv("NHANH_ACCESS_TOKEN", 
+            "twf9P1xFZCUUgwt8zR0XgNeB6V5jsbq2KHb14bxovqK1ppCxyADwOK8FzQlCEeEGABRZINXoUCSzM50kjhwcrUSBWTY5nSvyhfnH2X2cI0pC7pNczSVxc1ratdDmxF85q7hUTUNCrUnpPTG5ZwLNO7bkMlEEJTCdPhgYaC"),
+        "base_url": "https://pos.open.nhanh.vn/api",
+        "version": "2.0",
+        "timeout": 30,
+        "max_retries": 3
+    },
+    "database": {
+        "path": os.getenv("DATABASE_PATH", "data"),
+        "name_template": "nhanh_data_{date}.duckdb"
+    },
+    "data": {
+        "default_depot_id": 155286,
+        "default_mode_bills": 6,
+        "default_mode_imexs": 2,
+        "default_icpp": 20,
+        "max_pages": 100
+    }
+}
+
+============================================================
+
+============================================================
+FILE: project\jobs\__init__.py
+============================================================
+from .nhanh_data_pipeline import *
+
+__all__ = ['nhanh_daily_job', 'nhanh_backfill_job']
+
+============================================================
+
+============================================================
+FILE: project\jobs\nhanh_data_pipeline.py
+============================================================
+from dagster import job, DailyPartitionsDefinition
+from ..config import CONFIG  # ← Thêm dòng này
+from ..ops.bills_ops import extract_bills_op, load_bills_op
+from ..ops.imexs_ops import extract_imexs_op, load_imexs_op
+from ..ops.utils_ops import validate_date_op, setup_pipeline_op
+from ..resources.nhanh_api_resource import nhanh_api_resource
+from ..resources.database_resource import database_resource
+
+# Partition definition
+daily_partitions = DailyPartitionsDefinition(
+    start_date="2024-01-01",
+    end_offset=0
+)
+
+@job(
+    partitions_def=daily_partitions,
+    resource_defs={
+        # ← Thay đổi ở đây - configure resources với CONFIG
+        "nhanh_api": nhanh_api_resource.configured(CONFIG["api"]),
+        "database": database_resource.configured(CONFIG["database"])
+    },
+    tags={
+        "pipeline": "nhanh_data",
+        "frequency": "daily"
+    }
+)
+def nhanh_daily_job():
+    """Daily job to extract and load Nhanh.vn data."""
+    
+    # Get partition date and validate
+    validated_date = validate_date_op()
+    
+    # Setup pipeline
+    pipeline = setup_pipeline_op(validated_date)
+    
+    # Extract data
+    bills_data = extract_bills_op(validated_date)
+    imexs_data = extract_imexs_op(validated_date)
+    
+    # Load data
+    bills_result = load_bills_op(bills_data, pipeline)
+    imexs_result = load_imexs_op(imexs_data, pipeline)
+
+@job(
+    resource_defs={
+        "nhanh_api": nhanh_api_resource,
+        "database": database_resource
+    },
+    tags={
+        "pipeline": "nhanh_data",
+        "frequency": "adhoc"
+    }
+)
+def nhanh_backfill_job():
+    """Ad-hoc job for backfilling historical data."""
+    
+    # Get and validate date
+    validated_date = validate_date_op()
+    
+    # Setup pipeline
+    pipeline = setup_pipeline_op(validated_date)
+    
+    # Extract data
+    bills_data = extract_bills_op(validated_date)
+    imexs_data = extract_imexs_op(validated_date)
+    
+    # Load data
+    bills_result = load_bills_op(bills_data, pipeline)
+    imexs_result = load_imexs_op(imexs_data, pipeline)
+
+============================================================
+
+============================================================
+FILE: project\ops\__init__.py
+============================================================
+from .bills_ops import *
+from .imexs_ops import *
+from .utils_ops import *
+
+__all__ = ['extract_bills_op', 'extract_imexs_op', 'validate_date_op', 'setup_pipeline_op']
+
+============================================================
+
+============================================================
+FILE: project\ops\bills_ops.py
+============================================================
+from dagster import op, In, Out, get_dagster_logger, Field
+import dlt
+
+@op(
+    required_resource_keys={"nhanh_api"},
+    ins={
+        "date": In(str, description="Date to extract bills for")
+    },
+    out=Out(list, description="Bills data extracted from API"),
+    config_schema={
+        "depot_id": Field(int, default_value=155286),
+        "mode": Field(int, default_value=6)
+    },
+    tags={"kind": "extract", "source": "bills"}
+)
+def extract_bills_op(context, date: str) -> list:
+    """Extract bills data from Nhanh.vn API."""
+    logger = get_dagster_logger()
+    api = context.resources.nhanh_api
+    
+    depot_id = context.op_config["depot_id"]
+    mode = context.op_config["mode"]
+    
+    data_dict = {
+        "depotId": depot_id,
+        "mode": mode,
+        "fromDate": date,
+        "toDate": date
+    }
+    
+    logger.info(f"Extracting bills for date {date} with params: {data_dict}")
+    
+    bills_data = api.extract_data(
+        endpoint="bill/search",
+        data_dict=data_dict,
+        data_key="bill"
+    )
+    
+    logger.info(f"Successfully extracted {len(bills_data)} bills records")
+    return bills_data
+
+@dlt.resource
+def bills_dlt_resource(bills_data: list):
+    """DLT resource for bills data."""
+    if bills_data:
+        yield bills_data
+    else:
+        # Yield empty list to avoid DLT errors
+        yield []
+
+@op(
+    ins={
+        "bills_data": In(list, description="Bills data to load"),
+        "pipeline": In(object, description="DLT pipeline object")
+    },
+    out=Out(str, description="Load result message"),
+    tags={"kind": "load", "destination": "duckdb"}
+)
+def load_bills_op(context, bills_data: list, pipeline: object) -> str:
+    """Load bills data using DLT pipeline."""
+    logger = get_dagster_logger()
+    
+    # Create DLT resource
+    bills_resource = bills_dlt_resource(bills_data)
+    
+    try:
+        # Run the pipeline
+        load_info = pipeline.run(
+            [bills_resource],
+            dataset_name=f"bills_{context.partition_key.replace('-', '')}",
+            write_disposition="replace"
+        )
+        
+        result_msg = f"Bills loaded successfully: {len(bills_data)} records"
+        logger.info(result_msg)
+        logger.debug(f"Load info: {load_info}")
+        
+        return result_msg
+    except Exception as e:
+        error_msg = f"Failed to load bills data: {str(e)}"
+        logger.error(error_msg)
+        raise
+
+============================================================
+
+============================================================
+FILE: project\ops\imexs_ops.py
+============================================================
+from dagster import op, In, Out, get_dagster_logger, Field
+import dlt
+
+@op(
+    required_resource_keys={"nhanh_api"},
+    ins={
+        "date": In(str, description="Date to extract imexs for")
+    },
+    out=Out(list, description="Imexs data extracted from API"),
+    config_schema={
+        "icpp": Field(int, default_value=20),
+        "mode": Field(int, default_value=2)
+    },
+    tags={"kind": "extract", "source": "imexs"}
+)
+def extract_imexs_op(context, date: str) -> list:
+    """Extract imexs data from Nhanh.vn API."""
+    logger = get_dagster_logger()
+    api = context.resources.nhanh_api
+    
+    icpp = context.op_config["icpp"]
+    mode = context.op_config["mode"]
+    
+    data_dict = {
+        "icpp": icpp,
+        "mode": mode,
+        "fromDate": date,
+        "toDate": date
+    }
+    
+    logger.info(f"Extracting imexs for date {date} with params: {data_dict}")
+    
+    imexs_data = api.extract_data(
+        endpoint="bill/imexs",
+        data_dict=data_dict,
+        data_key="imexs"
+    )
+    
+    logger.info(f"Successfully extracted {len(imexs_data)} imexs records")
+    return imexs_data
+
+@dlt.resource
+def imexs_dlt_resource(imexs_data: list):
+    """DLT resource for imexs data."""
+    if imexs_data:
+        yield imexs_data
+    else:
+        # Yield empty list to avoid DLT errors
+        yield []
+
+@op(
+    ins={
+        "imexs_data": In(list, description="Imexs data to load"),
+        "pipeline": In(object, description="DLT pipeline object")
+    },
+    out=Out(str, description="Load result message"),
+    tags={"kind": "load", "destination": "duckdb"}
+)
+def load_imexs_op(context, imexs_data: list, pipeline: object) -> str:
+    """Load imexs data using DLT pipeline."""
+    logger = get_dagster_logger()
+    
+    # Create DLT resource
+    imexs_resource = imexs_dlt_resource(imexs_data)
+    
+    try:
+        # Run the pipeline
+        load_info = pipeline.run(
+            [imexs_resource],
+            dataset_name=f"imexs_{context.partition_key.replace('-', '')}",
+            write_disposition="replace"
+        )
+        
+        result_msg = f"Imexs loaded successfully: {len(imexs_data)} records"
+        logger.info(result_msg)
+        logger.debug(f"Load info: {load_info}")
+        
+        return result_msg
+    except Exception as e:
+        error_msg = f"Failed to load imexs data: {str(e)}"
+        logger.error(error_msg)
+        raise
+
+============================================================
+
+============================================================
+FILE: project\ops\utils_ops.py
+============================================================
+from datetime import datetime, timedelta
+from dagster import op, In, Out, get_dagster_logger
+
+@op(
+    out=Out(str, description="Validated date string"),
+    tags={"kind": "validation"}
+)
+def validate_date_op(context) -> str:
+    """Validate and return date string in YYYY-MM-DD format."""
+    logger = get_dagster_logger()
+
+    # Lấy date từ partition key
+    date_str = context.partition_key
+
+    try:
+        # Validate date format
+        parsed_date = datetime.strptime(date_str, "%Y-%m-%d")
+        validated_date = parsed_date.strftime("%Y-%m-%d")
+        logger.info(f"Date validated: {validated_date}")
+        return validated_date
+    except ValueError as e:
+        logger.error(f"Invalid date format {date_str}: {str(e)}")
+        raise
+
+@op(
+    out=Out(str, description="Today's date"),
+    tags={"kind": "utility"}
+)
+def get_today_op(context) -> str:
+    """Get today's date."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    get_dagster_logger().info(f"Today's date: {today}")
+    return today
+
+@op(
+    out=Out(str, description="Yesterday's date"),
+    tags={"kind": "utility"}
+)
+def get_yesterday_op(context) -> str:
+    """Get yesterday's date."""
+    yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    get_dagster_logger().info(f"Yesterday's date: {yesterday}")
+    return yesterday
+
+@op(
+    required_resource_keys={"database"},
+    ins={"date": In(str, description="Date for pipeline setup")},
+    out=Out(object, description="DLT Pipeline object"),
+    tags={"kind": "setup"}
+)
+def setup_pipeline_op(context, date: str) -> object:
+    """Setup DLT pipeline for given date."""
+    logger = get_dagster_logger()
+    pipeline_name = f"nhanh_data_pipeline_{date.replace('-', '')}"
+    
+    pipeline = context.resources.database.create_pipeline(pipeline_name, date)
+    logger.info(f"Pipeline setup completed: {pipeline_name}")
+    
+    return pipeline
+
+============================================================
+
+============================================================
+FILE: project\repository.py
+============================================================
+# project/repository.py
+from dagster import Definitions
+from .jobs.nhanh_data_pipeline import nhanh_daily_job, nhanh_backfill_job
+from .schedules.daily_schedule import nhanh_daily_schedule
+from .resources.nhanh_api_resource import nhanh_api_resource
+from .resources.database_resource import database_resource
+
+defs = Definitions(
+    jobs=[nhanh_daily_job, nhanh_backfill_job],
+    schedules=[nhanh_daily_schedule],
+    resources={
+        "nhanh_api": nhanh_api_resource,
+        "database": database_resource
+    }
+)
+
+============================================================
+
+============================================================
+FILE: project\resources\__init__.py
+============================================================
+from .nhanh_api_resource import NhanhAPIResource
+from .database_resource import DatabaseResource
+
+__all__ = ['NhanhAPIResource', 'DatabaseResource']
+
+============================================================
+
+============================================================
+FILE: project\resources\database_resource.py
+============================================================
+import dlt
+from pathlib import Path
+from dagster import resource, get_dagster_logger, Field, StringSource
+
+@resource(
+    config_schema={
+        "path": Field(StringSource),
+        "name_template": Field(StringSource),
+        "driver": Field(StringSource, default_value="duckdb")
+    }
+)
+def database_resource(context) -> "DatabaseResource":
+    """Resource for database operations."""
+    return DatabaseResource(
+        path=context.resource_config["path"],
+        name_template=context.resource_config["name_template"], 
+        driver=context.resource_config["driver"],
+        logger=get_dagster_logger()
+    )
+
+class DatabaseResource:
+    def __init__(self, path: str, name_template: str, driver: str, logger):
+        self.path = Path(path)
+        self.name_template = name_template
+        self.driver = driver
+        self.logger = logger
+        
+        # Ensure data directory exists
+        self.path.mkdir(parents=True, exist_ok=True)
+
+    def get_db_path(self, date: str) -> Path:
+        """Get database path for given date."""
+        db_name = self.name_template.format(date=date.replace('-', ''))
+        return self.path / db_name
+
+    def create_pipeline(self, pipeline_name: str, date: str):
+        """Create DLT pipeline for given date."""
+        db_path = self.get_db_path(date)
+        self.logger.info(f"Creating pipeline with DB path: {db_path}")
+        
+        # Tạo pipeline với working directory
+        pipeline = dlt.pipeline(
+            pipeline_name=pipeline_name,
+            destination=dlt.destinations.duckdb(str(db_path)),
+            dataset_name=f"nhanh_data_{date.replace('-', '')}"
+        )
+        
+        return pipeline
+
+
+============================================================
+
+============================================================
+FILE: project\resources\nhanh_api_resource.py
+============================================================
+import requests
+import json
+from typing import Dict, Any, Generator
+from dagster import resource, get_dagster_logger, Field, StringSource
+
+@resource(
+    config_schema={
+        "app_id": Field(StringSource),
+        "business_id": Field(StringSource), 
+        "access_token": Field(StringSource),
+        "base_url": Field(StringSource),
+        "version": Field(StringSource, default_value="2.0"),
+        "timeout": Field(int, default_value=30),
+        "max_retries": Field(int, default_value=3)
+    }
+)
+def nhanh_api_resource(context) -> "NhanhAPIResource":
+    """Resource for interacting with Nhanh.vn API."""
+    return NhanhAPIResource(
+        app_id=context.resource_config["app_id"],
+        business_id=context.resource_config["business_id"],
+        access_token=context.resource_config["access_token"],
+        base_url=context.resource_config["base_url"],
+        version=context.resource_config["version"],
+        timeout=context.resource_config["timeout"],
+        max_retries=context.resource_config["max_retries"],
+        logger=get_dagster_logger()
+    )
+
+class NhanhAPIResource:
+    def __init__(self, app_id: str, business_id: str, access_token: str, 
+                 base_url: str, version: str, timeout: int, max_retries: int, logger):
+        self.app_id = app_id
+        self.business_id = business_id
+        self.access_token = access_token
+        self.base_url = base_url
+        self.version = version
+        self.timeout = timeout
+        self.max_retries = max_retries
+        self.logger = logger
+
+    def build_payload(self, data_dict: Dict[str, Any]) -> Dict[str, Any]:
+        """Build payload for Nhanh.vn API."""
+        return {
+            "version": self.version,
+            "appId": self.app_id,
+            "businessId": self.business_id,
+            "accessToken": self.access_token,
+            "data": json.dumps(data_dict)
+        }
+
+    def call_api_paginated(self, endpoint: str, data_dict: Dict[str, Any], 
+                          page_key: str = "page", max_pages: int = 100) -> Generator[Dict[str, Any], None, None]:
+        """Call API with pagination support."""
+        page = 1
+        url = f"{self.base_url}/{endpoint.lstrip('/')}"
+        
+        while page <= max_pages:
+            data_dict[page_key] = page
+            payload = self.build_payload(data_dict)
+            
+            try:
+                response = requests.post(url, data=payload, timeout=self.timeout)
+                response.raise_for_status()
+            except requests.RequestException as e:
+                self.logger.error(f"HTTP Request failed for page {page}: {str(e)}")
+                break
+            
+            try:
+                resp_json = response.json()
+            except json.JSONDecodeError:
+                self.logger.error(f"Invalid JSON response for page {page}")
+                break
+
+            api_code = resp_json.get("code")
+            page_data = resp_json.get("data", {})
+            
+            if api_code != 1:
+                self.logger.warning(f"API returned code {api_code} for page {page}")
+                if not page_data:
+                    break
+            
+            if page_data:
+                yield page_data
+            else:
+                break
+
+            current_page = page_data.get("page", page_data.get("currentPage", page))
+            total_pages = page_data.get("totalPages", page_data.get("totalPage", page))
+            
+            if current_page >= total_pages:
+                break
+                
+            page += 1
+
+    def extract_data(self, endpoint: str, data_dict: Dict[str, Any], 
+                    data_key: str, page_key: str = "page", max_pages: int = 100) -> list:
+        """Extract data from paginated API calls."""
+        all_data = []
+        
+        try:
+            for page_data in self.call_api_paginated(endpoint, data_dict, page_key, max_pages):
+                if data_key in page_data:
+                    data_on_page = page_data[data_key]
+                    if isinstance(data_on_page, dict):
+                        all_data.extend(list(data_on_page.values()))
+                    elif isinstance(data_on_page, list):
+                        all_data.extend(data_on_page)
+                    else:
+                        self.logger.warning(f"Unexpected data structure for {data_key}: {type(data_on_page)}")
+        except Exception as e:
+            self.logger.error(f"Error extracting data from {endpoint}: {str(e)}")
+            
+        self.logger.info(f"Extracted {len(all_data)} records from {endpoint}")
+        return all_data
+
+============================================================
+
+============================================================
+FILE: project\schedules\__init__.py
+============================================================
+from .daily_schedule import *
+
+__all__ = ['nhanh_daily_schedule']
+
+============================================================
+
+============================================================
+
+============================================================
+FILE: requirements.txt
+============================================================
+dagster>=1.5.0
+dagster-webserver>=1.5.0
+dagster-duckdb>=0.21.0
+dlt[duckdb]>=0.4.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+============================================================
+
+============================================================
+FILE: tests\__init__.py
+============================================================
+
+============================================================
+
+============================================================
+FILE: workspace.yaml
+============================================================
+# workspace.yaml  
+load_from:
+  - python_module:
+      module_name: project.repository
+      attribute: defs
+
+============================================================
+
+
+📊 THỐNG KÊ
+------------------------------
+Tổng số file: 48
+File code: 19
+Các loại file code:
+  .md: 1 file
+  .py: 15 file
+  .txt: 2 file
+  .yaml: 1 file
