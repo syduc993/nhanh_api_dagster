@@ -1,0 +1,13 @@
+# dagster_cloud.yaml  
+locations:
+  - location_name: nhanh-data-pipeline
+    code_source:
+      package_name: project
+    build:
+      directory: .
+    container_context:
+      env_vars:
+        - NHANH_APP_ID
+        - NHANH_BUSINESS_ID  
+        - NHANH_ACCESS_TOKEN
+        - DATABASE_PATH
