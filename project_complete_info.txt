@@ -1,13 +1,14 @@
 ================================================================================
 THÔNG TIN DỰ ÁN HOÀN CHỈNH
 ================================================================================
-Thời gian tạo: 2025-08-07 11:57:37
+Thời gian tạo: 2025-08-15 08:38:09
 Thư mục gốc: d:\Atino\nhanh_api_dagster
 ================================================================================
 
 📁 CẤU TRÚC THU MỤC
 --------------------------------------------------
 ├── 📁 data/
+│   └── 📄 nhanh_data_20250806.duckdb
 ├── 📁 docs/
 │   └── 📄 README.md
 ├── 📁 project/
@@ -32,53 +33,33 @@ Thư mục gốc: d:\Atino\nhanh_api_dagster
 ├── 📁 tests/
 │   └── 📄 __init__.py
 ├── 📄 .gitignore
+├── 📄 dagster_cloud.yaml
 ├── 📄 Dockerfile
 ├── 📄 Get detail code.ipynb
 ├── 📄 project_complete_info.txt
+├── 📄 pyproject.toml
 ├── 📄 requirements.txt
 └── 📄 workspace.yaml
 
 
 📄 DANH SÁCH TẤT CẢ FILE
 --------------------------------------------------
+.github\workflows\branch_deployments.yml (2847 bytes)
+.github\workflows\deploy.yml (2819 bytes)
 .gitignore (403 bytes)
-.tmp_dagster_home_62_lcao7\history\runs\15083412-53eb-4516-8609-a7cc04e6fe72.db (258048 bytes)
-.tmp_dagster_home_62_lcao7\history\runs\index.db (126976 bytes)
-.tmp_dagster_home_62_lcao7\history\runs.db (135168 bytes)
-.tmp_dagster_home_62_lcao7\schedules\schedules.db (77824 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_bills_op\result (5795 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_imexs_op\result (1098435 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\setup_pipeline_op\result (239 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\validate_date_op\result (25 bytes)
+dagster_cloud.yaml (306 bytes)
+data\nhanh_data_20250806.duckdb (4468736 bytes)
 Dockerfile (574 bytes)
 docs\README.md (704 bytes)
 Get detail code.ipynb (8697 bytes)
 project\__init__.py (0 bytes)
 project\config.py (891 bytes)
 project\jobs\__init__.py (91 bytes)
-project\jobs\nhanh_data_pipeline.py (2125 bytes)
-project\ops\__init__.py (173 bytes)
-project\ops\bills_ops.py (2496 bytes)
-project\ops\imexs_ops.py (2473 bytes)
-project\ops\utils_ops.py (1963 bytes)
+project\jobs\nhanh_data_pipeline.py (2059 bytes)
+project\ops\__init__.py (186 bytes)
+project\ops\bills_ops.py (2892 bytes)
+project\ops\imexs_ops.py (2869 bytes)
+project\ops\utils_ops.py (1377 bytes)
 project\repository.py (534 bytes)
 project\resources\__init__.py (153 bytes)
 project\resources\database_resource.py (1733 bytes)
@@ -86,14 +67,202 @@ project\resources\nhanh_api_resource.py (4713 bytes)
 project\schedules\__init__.py (69 bytes)
 project\schedules\daily_schedule.py (691 bytes)
 project_complete_info.txt (0 bytes)
-requirements.txt (126 bytes)
+pyproject.toml (799 bytes)
+requirements.txt (148 bytes)
 tests\__init__.py (0 bytes)
 workspace.yaml (114 bytes)
 
-Tổng cộng: 48 file
+Tổng cộng: 27 file
 
 💻 NỘI DUNG TẤT CẢ FILE CODE
 ================================================================================
+
+============================================================
+FILE: .github\workflows\branch_deployments.yml
+============================================================
+name: Serverless Branch Deployments
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+concurrency:
+  # Cancel in-progress deploys to same branch
+  group: ${{ github.ref }}/branch_deployments
+  cancel-in-progress: true
+env:
+  DAGSTER_CLOUD_URL: "http://atino.dagster.cloud"
+  DAGSTER_CLOUD_API_TOKEN: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+  ENABLE_FAST_DEPLOYS: 'true'
+  PYTHON_VERSION: '3.10'
+  DAGSTER_CLOUD_FILE: 'dagster_cloud.yaml'
+
+jobs:
+  dagster_cloud_default_deploy:
+    name: Dagster Serverless Deploy
+    runs-on: ubuntu-22.04
+    outputs:
+      build_info: ${{ steps.parse-workspace.outputs.build_info }}
+
+    steps:
+      - name: Prerun Checks
+        id: prerun
+        uses: dagster-io/dagster-cloud-action/actions/utils/prerun@v0.1
+
+      - name: Launch Docker Deploy
+        if: steps.prerun.outputs.result == 'docker-deploy'
+        id: parse-workspace
+        uses: dagster-io/dagster-cloud-action/actions/utils/parse_workspace@v0.1
+        with:
+          dagster_cloud_file: $DAGSTER_CLOUD_FILE
+
+      - name: Checkout for Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          path: project-repo
+
+      - name: Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: dagster-io/dagster-cloud-action/actions/build_deploy_python_executable@v0.1
+        with:
+          dagster_cloud_file: "$GITHUB_WORKSPACE/project-repo/$DAGSTER_CLOUD_FILE"
+          build_output_dir: "$GITHUB_WORKSPACE/build"
+          python_version: "${{ env.PYTHON_VERSION }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dagster_cloud_docker_deploy:
+    name: Docker Deploy
+    runs-on: ubuntu-20.04
+    if: needs.dagster_cloud_default_deploy.outputs.build_info
+    needs: dagster_cloud_default_deploy
+    strategy:
+      fail-fast: false
+      matrix:
+        location: ${{ fromJSON(needs.dagster_cloud_default_deploy.outputs.build_info) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Build and deploy to Dagster Cloud serverless
+        uses: dagster-io/dagster-cloud-action/actions/serverless_branch_deploy@v0.1
+        with:
+          dagster_cloud_api_token: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+          location: ${{ toJson(matrix.location) }}
+          base_image: "python:${{ env.PYTHON_VERSION }}-slim"
+          # Uncomment to pass through Github Action secrets as a JSON string of key-value pairs
+          # env_vars: ${{ toJson(secrets) }}
+          organization_id: ${{ secrets.ORGANIZATION_ID }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+============================================================
+
+============================================================
+FILE: .github\workflows\deploy.yml
+============================================================
+name: Serverless Prod Deployment
+on:
+  push:
+    branches:
+      - "main"
+      - "master"
+
+concurrency:
+  # Cancel in-progress deploys to same branch
+  group: ${{ github.ref }}/deploy
+  cancel-in-progress: true
+env:
+  DAGSTER_CLOUD_URL: "http://atino.dagster.cloud"
+  DAGSTER_CLOUD_API_TOKEN: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+  ENABLE_FAST_DEPLOYS: 'true'
+  PYTHON_VERSION: '3.10'
+  DAGSTER_CLOUD_FILE: 'dagster_cloud.yaml'
+
+jobs:
+  dagster_cloud_default_deploy:
+    name: Dagster Serverless Deploy
+    runs-on: ubuntu-22.04
+    outputs:
+      build_info: ${{ steps.parse-workspace.outputs.build_info }}
+
+    steps:
+      - name: Prerun Checks
+        id: prerun
+        uses: dagster-io/dagster-cloud-action/actions/utils/prerun@v0.1
+
+      - name: Launch Docker Deploy
+        if: steps.prerun.outputs.result == 'docker-deploy'
+        id: parse-workspace
+        uses: dagster-io/dagster-cloud-action/actions/utils/parse_workspace@v0.1
+        with:
+          dagster_cloud_file: $DAGSTER_CLOUD_FILE
+
+      - name: Checkout for Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          path: project-repo
+
+      - name: Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: dagster-io/dagster-cloud-action/actions/build_deploy_python_executable@v0.1
+        with:
+          dagster_cloud_file: "$GITHUB_WORKSPACE/project-repo/$DAGSTER_CLOUD_FILE"
+          build_output_dir: "$GITHUB_WORKSPACE/build"
+          python_version: "${{ env.PYTHON_VERSION }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dagster_cloud_docker_deploy:
+    name: Docker Deploy
+    runs-on: ubuntu-20.04
+    if: needs.dagster_cloud_default_deploy.outputs.build_info
+    needs: dagster_cloud_default_deploy
+    strategy:
+      fail-fast: false
+      matrix:
+        location: ${{ fromJSON(needs.dagster_cloud_default_deploy.outputs.build_info) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Build and deploy to Dagster Cloud serverless
+        uses: dagster-io/dagster-cloud-action/actions/serverless_prod_deploy@v0.1
+        with:
+          dagster_cloud_api_token: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+          location: ${{ toJson(matrix.location) }}
+          base_image: "python:${{ env.PYTHON_VERSION }}-slim"
+          # Uncomment to pass through Github Action secrets as a JSON string of key-value pairs
+          # env_vars: ${{ toJson(secrets) }}
+          organization_id: ${{ secrets.ORGANIZATION_ID }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+============================================================
+
+============================================================
+FILE: dagster_cloud.yaml
+============================================================
+# dagster_cloud.yaml  
+locations:
+  - location_name: nhanh-data-pipeline
+    code_source:
+      package_name: project
+    build:
+      directory: .
+    container_context:
+      env_vars:
+        - NHANH_APP_ID
+        - NHANH_BUSINESS_ID  
+        - NHANH_ACCESS_TOKEN
+        - DATABASE_PATH
+
+============================================================
 
 ============================================================
 FILE: docs\README.md
@@ -175,10 +344,10 @@ __all__ = ['nhanh_daily_job', 'nhanh_backfill_job']
 FILE: project\jobs\nhanh_data_pipeline.py
 ============================================================
 from dagster import job, DailyPartitionsDefinition
-from ..config import CONFIG  # ← Thêm dòng này
+from ..config import CONFIG
 from ..ops.bills_ops import extract_bills_op, load_bills_op
 from ..ops.imexs_ops import extract_imexs_op, load_imexs_op
-from ..ops.utils_ops import validate_date_op, setup_pipeline_op
+from ..ops.utils_ops import validate_date_op  # ← Bỏ setup_pipeline_op khỏi import
 from ..resources.nhanh_api_resource import nhanh_api_resource
 from ..resources.database_resource import database_resource
 
@@ -191,7 +360,6 @@ daily_partitions = DailyPartitionsDefinition(
 @job(
     partitions_def=daily_partitions,
     resource_defs={
-        # ← Thay đổi ở đây - configure resources với CONFIG
         "nhanh_api": nhanh_api_resource.configured(CONFIG["api"]),
         "database": database_resource.configured(CONFIG["database"])
     },
@@ -206,21 +374,18 @@ def nhanh_daily_job():
     # Get partition date and validate
     validated_date = validate_date_op()
     
-    # Setup pipeline
-    pipeline = setup_pipeline_op(validated_date)
-    
-    # Extract data
+    # Extract data (không cần setup_pipeline_op nữa)
     bills_data = extract_bills_op(validated_date)
     imexs_data = extract_imexs_op(validated_date)
     
-    # Load data
-    bills_result = load_bills_op(bills_data, pipeline)
-    imexs_result = load_imexs_op(imexs_data, pipeline)
+    # Load data - truyền date thay vì pipeline object
+    bills_result = load_bills_op(bills_data, validated_date)
+    imexs_result = load_imexs_op(imexs_data, validated_date)
 
 @job(
     resource_defs={
-        "nhanh_api": nhanh_api_resource,
-        "database": database_resource
+        "nhanh_api": nhanh_api_resource.configured(CONFIG["api"]),
+        "database": database_resource.configured(CONFIG["database"])
     },
     tags={
         "pipeline": "nhanh_data",
@@ -233,16 +398,13 @@ def nhanh_backfill_job():
     # Get and validate date
     validated_date = validate_date_op()
     
-    # Setup pipeline
-    pipeline = setup_pipeline_op(validated_date)
-    
     # Extract data
     bills_data = extract_bills_op(validated_date)
     imexs_data = extract_imexs_op(validated_date)
     
     # Load data
-    bills_result = load_bills_op(bills_data, pipeline)
-    imexs_result = load_imexs_op(imexs_data, pipeline)
+    bills_result = load_bills_op(bills_data, validated_date)
+    imexs_result = load_imexs_op(imexs_data, validated_date)
 
 ============================================================
 
@@ -253,7 +415,7 @@ from .bills_ops import *
 from .imexs_ops import *
 from .utils_ops import *
 
-__all__ = ['extract_bills_op', 'extract_imexs_op', 'validate_date_op', 'setup_pipeline_op']
+__all__ = ['extract_bills_op', 'load_bills_op', 'extract_imexs_op', 'load_imexs_op', 'validate_date_op']
 
 ============================================================
 
@@ -311,16 +473,27 @@ def bills_dlt_resource(bills_data: list):
         yield []
 
 @op(
+    required_resource_keys={"database"},  # Thêm database resource
     ins={
         "bills_data": In(list, description="Bills data to load"),
-        "pipeline": In(object, description="DLT pipeline object")
+        "date": In(str, description="Date for pipeline setup")  # Đổi từ pipeline object sang date
     },
     out=Out(str, description="Load result message"),
     tags={"kind": "load", "destination": "duckdb"}
 )
-def load_bills_op(context, bills_data: list, pipeline: object) -> str:
+def load_bills_op(context, bills_data: list, date: str) -> str:
     """Load bills data using DLT pipeline."""
     logger = get_dagster_logger()
+    
+    # Tạo pipeline mới trong op này
+    pipeline_name = f"nhanh_bills_pipeline_{date.replace('-', '')}"
+    db_path = context.resources.database.get_db_path(date)
+    
+    pipeline = dlt.pipeline(
+        pipeline_name=pipeline_name,
+        destination=dlt.destinations.duckdb(str(db_path)),
+        dataset_name=f"bills_{date.replace('-', '')}"
+    )
     
     # Create DLT resource
     bills_resource = bills_dlt_resource(bills_data)
@@ -329,7 +502,6 @@ def load_bills_op(context, bills_data: list, pipeline: object) -> str:
         # Run the pipeline
         load_info = pipeline.run(
             [bills_resource],
-            dataset_name=f"bills_{context.partition_key.replace('-', '')}",
             write_disposition="replace"
         )
         
@@ -399,16 +571,27 @@ def imexs_dlt_resource(imexs_data: list):
         yield []
 
 @op(
+    required_resource_keys={"database"},  # Thêm database resource
     ins={
         "imexs_data": In(list, description="Imexs data to load"),
-        "pipeline": In(object, description="DLT pipeline object")
+        "date": In(str, description="Date for pipeline setup")  # Đổi từ pipeline object sang date
     },
     out=Out(str, description="Load result message"),
     tags={"kind": "load", "destination": "duckdb"}
 )
-def load_imexs_op(context, imexs_data: list, pipeline: object) -> str:
+def load_imexs_op(context, imexs_data: list, date: str) -> str:
     """Load imexs data using DLT pipeline."""
     logger = get_dagster_logger()
+    
+    # Tạo pipeline mới trong op này
+    pipeline_name = f"nhanh_imexs_pipeline_{date.replace('-', '')}"
+    db_path = context.resources.database.get_db_path(date)
+    
+    pipeline = dlt.pipeline(
+        pipeline_name=pipeline_name,
+        destination=dlt.destinations.duckdb(str(db_path)),
+        dataset_name=f"imexs_{date.replace('-', '')}"
+    )
     
     # Create DLT resource
     imexs_resource = imexs_dlt_resource(imexs_data)
@@ -417,7 +600,6 @@ def load_imexs_op(context, imexs_data: list, pipeline: object) -> str:
         # Run the pipeline
         load_info = pipeline.run(
             [imexs_resource],
-            dataset_name=f"imexs_{context.partition_key.replace('-', '')}",
             write_disposition="replace"
         )
         
@@ -479,23 +661,6 @@ def get_yesterday_op(context) -> str:
     yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
     get_dagster_logger().info(f"Yesterday's date: {yesterday}")
     return yesterday
-
-@op(
-    required_resource_keys={"database"},
-    ins={"date": In(str, description="Date for pipeline setup")},
-    out=Out(object, description="DLT Pipeline object"),
-    tags={"kind": "setup"}
-)
-def setup_pipeline_op(context, date: str) -> object:
-    """Setup DLT pipeline for given date."""
-    logger = get_dagster_logger()
-    pipeline_name = f"nhanh_data_pipeline_{date.replace('-', '')}"
-    
-    pipeline = context.resources.database.create_pipeline(pipeline_name, date)
-    logger.info(f"Pipeline setup completed: {pipeline_name}")
-    
-    return pipeline
-
 ============================================================
 
 ============================================================
@@ -750,13 +915,14 @@ FILE: project_complete_info.txt
 ================================================================================
 THÔNG TIN DỰ ÁN HOÀN CHỈNH
 ================================================================================
-Thời gian tạo: 2025-08-07 11:57:37
+Thời gian tạo: 2025-08-15 08:38:09
 Thư mục gốc: d:\Atino\nhanh_api_dagster
 ================================================================================
 
 📁 CẤU TRÚC THU MỤC
 --------------------------------------------------
 ├── 📁 data/
+│   └── 📄 nhanh_data_20250806.duckdb
 ├── 📁 docs/
 │   └── 📄 README.md
 ├── 📁 project/
@@ -781,53 +947,33 @@ Thư mục gốc: d:\Atino\nhanh_api_dagster
 ├── 📁 tests/
 │   └── 📄 __init__.py
 ├── 📄 .gitignore
+├── 📄 dagster_cloud.yaml
 ├── 📄 Dockerfile
 ├── 📄 Get detail code.ipynb
 ├── 📄 project_complete_info.txt
+├── 📄 pyproject.toml
 ├── 📄 requirements.txt
 └── 📄 workspace.yaml
 
 
 📄 DANH SÁCH TẤT CẢ FILE
 --------------------------------------------------
+.github\workflows\branch_deployments.yml (2847 bytes)
+.github\workflows\deploy.yml (2819 bytes)
 .gitignore (403 bytes)
-.tmp_dagster_home_62_lcao7\history\runs\15083412-53eb-4516-8609-a7cc04e6fe72.db (258048 bytes)
-.tmp_dagster_home_62_lcao7\history\runs\index.db (126976 bytes)
-.tmp_dagster_home_62_lcao7\history\runs.db (135168 bytes)
-.tmp_dagster_home_62_lcao7\schedules\schedules.db (77824 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\atjneutm.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\ipvvxyzk.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\knrhvhjs.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\qjbshebn.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\rszulskc.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.complete (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.err (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\compute_logs\wrpgymqy.out (0 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_bills_op\result (5795 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\extract_imexs_op\result (1098435 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\setup_pipeline_op\result (239 bytes)
-.tmp_dagster_home_62_lcao7\storage\15083412-53eb-4516-8609-a7cc04e6fe72\validate_date_op\result (25 bytes)
+dagster_cloud.yaml (306 bytes)
+data\nhanh_data_20250806.duckdb (4468736 bytes)
 Dockerfile (574 bytes)
 docs\README.md (704 bytes)
 Get detail code.ipynb (8697 bytes)
 project\__init__.py (0 bytes)
 project\config.py (891 bytes)
 project\jobs\__init__.py (91 bytes)
-project\jobs\nhanh_data_pipeline.py (2125 bytes)
-project\ops\__init__.py (173 bytes)
-project\ops\bills_ops.py (2496 bytes)
-project\ops\imexs_ops.py (2473 bytes)
-project\ops\utils_ops.py (1963 bytes)
+project\jobs\nhanh_data_pipeline.py (2059 bytes)
+project\ops\__init__.py (186 bytes)
+project\ops\bills_ops.py (2892 bytes)
+project\ops\imexs_ops.py (2869 bytes)
+project\ops\utils_ops.py (1377 bytes)
 project\repository.py (534 bytes)
 project\resources\__init__.py (153 bytes)
 project\resources\database_resource.py (1733 bytes)
@@ -835,14 +981,202 @@ project\resources\nhanh_api_resource.py (4713 bytes)
 project\schedules\__init__.py (69 bytes)
 project\schedules\daily_schedule.py (691 bytes)
 project_complete_info.txt (0 bytes)
-requirements.txt (126 bytes)
+pyproject.toml (799 bytes)
+requirements.txt (148 bytes)
 tests\__init__.py (0 bytes)
 workspace.yaml (114 bytes)
 
-Tổng cộng: 48 file
+Tổng cộng: 27 file
 
 💻 NỘI DUNG TẤT CẢ FILE CODE
 ================================================================================
+
+============================================================
+FILE: .github\workflows\branch_deployments.yml
+============================================================
+name: Serverless Branch Deployments
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+concurrency:
+  # Cancel in-progress deploys to same branch
+  group: ${{ github.ref }}/branch_deployments
+  cancel-in-progress: true
+env:
+  DAGSTER_CLOUD_URL: "http://atino.dagster.cloud"
+  DAGSTER_CLOUD_API_TOKEN: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+  ENABLE_FAST_DEPLOYS: 'true'
+  PYTHON_VERSION: '3.10'
+  DAGSTER_CLOUD_FILE: 'dagster_cloud.yaml'
+
+jobs:
+  dagster_cloud_default_deploy:
+    name: Dagster Serverless Deploy
+    runs-on: ubuntu-22.04
+    outputs:
+      build_info: ${{ steps.parse-workspace.outputs.build_info }}
+
+    steps:
+      - name: Prerun Checks
+        id: prerun
+        uses: dagster-io/dagster-cloud-action/actions/utils/prerun@v0.1
+
+      - name: Launch Docker Deploy
+        if: steps.prerun.outputs.result == 'docker-deploy'
+        id: parse-workspace
+        uses: dagster-io/dagster-cloud-action/actions/utils/parse_workspace@v0.1
+        with:
+          dagster_cloud_file: $DAGSTER_CLOUD_FILE
+
+      - name: Checkout for Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          path: project-repo
+
+      - name: Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: dagster-io/dagster-cloud-action/actions/build_deploy_python_executable@v0.1
+        with:
+          dagster_cloud_file: "$GITHUB_WORKSPACE/project-repo/$DAGSTER_CLOUD_FILE"
+          build_output_dir: "$GITHUB_WORKSPACE/build"
+          python_version: "${{ env.PYTHON_VERSION }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dagster_cloud_docker_deploy:
+    name: Docker Deploy
+    runs-on: ubuntu-20.04
+    if: needs.dagster_cloud_default_deploy.outputs.build_info
+    needs: dagster_cloud_default_deploy
+    strategy:
+      fail-fast: false
+      matrix:
+        location: ${{ fromJSON(needs.dagster_cloud_default_deploy.outputs.build_info) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Build and deploy to Dagster Cloud serverless
+        uses: dagster-io/dagster-cloud-action/actions/serverless_branch_deploy@v0.1
+        with:
+          dagster_cloud_api_token: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+          location: ${{ toJson(matrix.location) }}
+          base_image: "python:${{ env.PYTHON_VERSION }}-slim"
+          # Uncomment to pass through Github Action secrets as a JSON string of key-value pairs
+          # env_vars: ${{ toJson(secrets) }}
+          organization_id: ${{ secrets.ORGANIZATION_ID }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+============================================================
+
+============================================================
+FILE: .github\workflows\deploy.yml
+============================================================
+name: Serverless Prod Deployment
+on:
+  push:
+    branches:
+      - "main"
+      - "master"
+
+concurrency:
+  # Cancel in-progress deploys to same branch
+  group: ${{ github.ref }}/deploy
+  cancel-in-progress: true
+env:
+  DAGSTER_CLOUD_URL: "http://atino.dagster.cloud"
+  DAGSTER_CLOUD_API_TOKEN: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+  ENABLE_FAST_DEPLOYS: 'true'
+  PYTHON_VERSION: '3.10'
+  DAGSTER_CLOUD_FILE: 'dagster_cloud.yaml'
+
+jobs:
+  dagster_cloud_default_deploy:
+    name: Dagster Serverless Deploy
+    runs-on: ubuntu-22.04
+    outputs:
+      build_info: ${{ steps.parse-workspace.outputs.build_info }}
+
+    steps:
+      - name: Prerun Checks
+        id: prerun
+        uses: dagster-io/dagster-cloud-action/actions/utils/prerun@v0.1
+
+      - name: Launch Docker Deploy
+        if: steps.prerun.outputs.result == 'docker-deploy'
+        id: parse-workspace
+        uses: dagster-io/dagster-cloud-action/actions/utils/parse_workspace@v0.1
+        with:
+          dagster_cloud_file: $DAGSTER_CLOUD_FILE
+
+      - name: Checkout for Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          path: project-repo
+
+      - name: Python Executable Deploy
+        if: steps.prerun.outputs.result == 'pex-deploy'
+        uses: dagster-io/dagster-cloud-action/actions/build_deploy_python_executable@v0.1
+        with:
+          dagster_cloud_file: "$GITHUB_WORKSPACE/project-repo/$DAGSTER_CLOUD_FILE"
+          build_output_dir: "$GITHUB_WORKSPACE/build"
+          python_version: "${{ env.PYTHON_VERSION }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dagster_cloud_docker_deploy:
+    name: Docker Deploy
+    runs-on: ubuntu-20.04
+    if: needs.dagster_cloud_default_deploy.outputs.build_info
+    needs: dagster_cloud_default_deploy
+    strategy:
+      fail-fast: false
+      matrix:
+        location: ${{ fromJSON(needs.dagster_cloud_default_deploy.outputs.build_info) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Build and deploy to Dagster Cloud serverless
+        uses: dagster-io/dagster-cloud-action/actions/serverless_prod_deploy@v0.1
+        with:
+          dagster_cloud_api_token: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
+          location: ${{ toJson(matrix.location) }}
+          base_image: "python:${{ env.PYTHON_VERSION }}-slim"
+          # Uncomment to pass through Github Action secrets as a JSON string of key-value pairs
+          # env_vars: ${{ toJson(secrets) }}
+          organization_id: ${{ secrets.ORGANIZATION_ID }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+============================================================
+
+============================================================
+FILE: dagster_cloud.yaml
+============================================================
+# dagster_cloud.yaml  
+locations:
+  - location_name: nhanh-data-pipeline
+    code_source:
+      package_name: project
+    build:
+      directory: .
+    container_context:
+      env_vars:
+        - NHANH_APP_ID
+        - NHANH_BUSINESS_ID  
+        - NHANH_ACCESS_TOKEN
+        - DATABASE_PATH
+
+============================================================
 
 ============================================================
 FILE: docs\README.md
@@ -924,10 +1258,10 @@ __all__ = ['nhanh_daily_job', 'nhanh_backfill_job']
 FILE: project\jobs\nhanh_data_pipeline.py
 ============================================================
 from dagster import job, DailyPartitionsDefinition
-from ..config import CONFIG  # ← Thêm dòng này
+from ..config import CONFIG
 from ..ops.bills_ops import extract_bills_op, load_bills_op
 from ..ops.imexs_ops import extract_imexs_op, load_imexs_op
-from ..ops.utils_ops import validate_date_op, setup_pipeline_op
+from ..ops.utils_ops import validate_date_op  # ← Bỏ setup_pipeline_op khỏi import
 from ..resources.nhanh_api_resource import nhanh_api_resource
 from ..resources.database_resource import database_resource
 
@@ -940,7 +1274,6 @@ daily_partitions = DailyPartitionsDefinition(
 @job(
     partitions_def=daily_partitions,
     resource_defs={
-        # ← Thay đổi ở đây - configure resources với CONFIG
         "nhanh_api": nhanh_api_resource.configured(CONFIG["api"]),
         "database": database_resource.configured(CONFIG["database"])
     },
@@ -955,21 +1288,18 @@ def nhanh_daily_job():
     # Get partition date and validate
     validated_date = validate_date_op()
     
-    # Setup pipeline
-    pipeline = setup_pipeline_op(validated_date)
-    
-    # Extract data
+    # Extract data (không cần setup_pipeline_op nữa)
     bills_data = extract_bills_op(validated_date)
     imexs_data = extract_imexs_op(validated_date)
     
-    # Load data
-    bills_result = load_bills_op(bills_data, pipeline)
-    imexs_result = load_imexs_op(imexs_data, pipeline)
+    # Load data - truyền date thay vì pipeline object
+    bills_result = load_bills_op(bills_data, validated_date)
+    imexs_result = load_imexs_op(imexs_data, validated_date)
 
 @job(
     resource_defs={
-        "nhanh_api": nhanh_api_resource,
-        "database": database_resource
+        "nhanh_api": nhanh_api_resource.configured(CONFIG["api"]),
+        "database": database_resource.configured(CONFIG["database"])
     },
     tags={
         "pipeline": "nhanh_data",
@@ -982,16 +1312,13 @@ def nhanh_backfill_job():
     # Get and validate date
     validated_date = validate_date_op()
     
-    # Setup pipeline
-    pipeline = setup_pipeline_op(validated_date)
-    
     # Extract data
     bills_data = extract_bills_op(validated_date)
     imexs_data = extract_imexs_op(validated_date)
     
     # Load data
-    bills_result = load_bills_op(bills_data, pipeline)
-    imexs_result = load_imexs_op(imexs_data, pipeline)
+    bills_result = load_bills_op(bills_data, validated_date)
+    imexs_result = load_imexs_op(imexs_data, validated_date)
 
 ============================================================
 
@@ -1002,7 +1329,7 @@ from .bills_ops import *
 from .imexs_ops import *
 from .utils_ops import *
 
-__all__ = ['extract_bills_op', 'extract_imexs_op', 'validate_date_op', 'setup_pipeline_op']
+__all__ = ['extract_bills_op', 'load_bills_op', 'extract_imexs_op', 'load_imexs_op', 'validate_date_op']
 
 ============================================================
 
@@ -1060,16 +1387,27 @@ def bills_dlt_resource(bills_data: list):
         yield []
 
 @op(
+    required_resource_keys={"database"},  # Thêm database resource
     ins={
         "bills_data": In(list, description="Bills data to load"),
-        "pipeline": In(object, description="DLT pipeline object")
+        "date": In(str, description="Date for pipeline setup")  # Đổi từ pipeline object sang date
     },
     out=Out(str, description="Load result message"),
     tags={"kind": "load", "destination": "duckdb"}
 )
-def load_bills_op(context, bills_data: list, pipeline: object) -> str:
+def load_bills_op(context, bills_data: list, date: str) -> str:
     """Load bills data using DLT pipeline."""
     logger = get_dagster_logger()
+    
+    # Tạo pipeline mới trong op này
+    pipeline_name = f"nhanh_bills_pipeline_{date.replace('-', '')}"
+    db_path = context.resources.database.get_db_path(date)
+    
+    pipeline = dlt.pipeline(
+        pipeline_name=pipeline_name,
+        destination=dlt.destinations.duckdb(str(db_path)),
+        dataset_name=f"bills_{date.replace('-', '')}"
+    )
     
     # Create DLT resource
     bills_resource = bills_dlt_resource(bills_data)
@@ -1078,7 +1416,6 @@ def load_bills_op(context, bills_data: list, pipeline: object) -> str:
         # Run the pipeline
         load_info = pipeline.run(
             [bills_resource],
-            dataset_name=f"bills_{context.partition_key.replace('-', '')}",
             write_disposition="replace"
         )
         
@@ -1148,16 +1485,27 @@ def imexs_dlt_resource(imexs_data: list):
         yield []
 
 @op(
+    required_resource_keys={"database"},  # Thêm database resource
     ins={
         "imexs_data": In(list, description="Imexs data to load"),
-        "pipeline": In(object, description="DLT pipeline object")
+        "date": In(str, description="Date for pipeline setup")  # Đổi từ pipeline object sang date
     },
     out=Out(str, description="Load result message"),
     tags={"kind": "load", "destination": "duckdb"}
 )
-def load_imexs_op(context, imexs_data: list, pipeline: object) -> str:
+def load_imexs_op(context, imexs_data: list, date: str) -> str:
     """Load imexs data using DLT pipeline."""
     logger = get_dagster_logger()
+    
+    # Tạo pipeline mới trong op này
+    pipeline_name = f"nhanh_imexs_pipeline_{date.replace('-', '')}"
+    db_path = context.resources.database.get_db_path(date)
+    
+    pipeline = dlt.pipeline(
+        pipeline_name=pipeline_name,
+        destination=dlt.destinations.duckdb(str(db_path)),
+        dataset_name=f"imexs_{date.replace('-', '')}"
+    )
     
     # Create DLT resource
     imexs_resource = imexs_dlt_resource(imexs_data)
@@ -1166,7 +1514,6 @@ def load_imexs_op(context, imexs_data: list, pipeline: object) -> str:
         # Run the pipeline
         load_info = pipeline.run(
             [imexs_resource],
-            dataset_name=f"imexs_{context.partition_key.replace('-', '')}",
             write_disposition="replace"
         )
         
@@ -1228,23 +1575,6 @@ def get_yesterday_op(context) -> str:
     yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
     get_dagster_logger().info(f"Yesterday's date: {yesterday}")
     return yesterday
-
-@op(
-    required_resource_keys={"database"},
-    ins={"date": In(str, description="Date for pipeline setup")},
-    out=Out(object, description="DLT Pipeline object"),
-    tags={"kind": "setup"}
-)
-def setup_pipeline_op(context, date: str) -> object:
-    """Setup DLT pipeline for given date."""
-    logger = get_dagster_logger()
-    pipeline_name = f"nhanh_data_pipeline_{date.replace('-', '')}"
-    
-    pipeline = context.resources.database.create_pipeline(pipeline_name, date)
-    logger.info(f"Pipeline setup completed: {pipeline_name}")
-    
-    return pipeline
-
 ============================================================
 
 ============================================================
@@ -1455,21 +1785,11 @@ class NhanhAPIResource:
 ============================================================
 
 ============================================================
-FILE: project\schedules\__init__.py
-============================================================
-from .daily_schedule import *
-
-__all__ = ['nhanh_daily_schedule']
-
-============================================================
-
-============================================================
-
-============================================================
 FILE: requirements.txt
 ============================================================
 dagster>=1.5.0
 dagster-webserver>=1.5.0
+dagster-cloud>=1.5.0
 dagster-duckdb>=0.21.0
 dlt[duckdb]>=0.4.0
 requests>=2.31.0
@@ -1497,10 +1817,11 @@ load_from:
 
 📊 THỐNG KÊ
 ------------------------------
-Tổng số file: 48
-File code: 19
+Tổng số file: 27
+File code: 22
 Các loại file code:
   .md: 1 file
   .py: 15 file
   .txt: 2 file
-  .yaml: 1 file
+  .yaml: 2 file
+  .yml: 2 file
